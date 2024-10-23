@@ -5,6 +5,8 @@ import dotenv from "dotenv"
 import connectDB from "./utils/db.js";
 import userRoute from "./routes/user.route.js";
 import companyRoute from "./routes/company.route.js";
+import jobRoute from "./routes/job.route.js";
+import applicationRoute from "./routes/application.route.js";
 
 
 dotenv.config({});
@@ -32,6 +34,8 @@ const PORT = process.env.PORT || 3000;
 //api's
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
+app.use("/api/v1/job", jobRoute);
+app.use("/api/v1/application", applicationRoute);
 
 
 //for users
@@ -44,6 +48,20 @@ app.use("/api/v1/company", companyRoute);
 "http://localhost:8000/api/v1/company/get"
 "http://localhost:8000/api/v1/company/get/:id"
 "http://localhost:8000/api/v1/company/update/:id"
+
+
+//for jobs
+"http://localhost:8000/api/v1/job/post"
+"http://localhost:8000/api/v1/job/get"
+"http://localhost:8000/api/v1/job/getadminjobs"
+"http://localhost:8000/api/v1/job/get/:id"
+
+//for applications
+"http://localhost:8000/api/v1/application/apply/:id"
+"http://localhost:8000/api/v1/application/get"
+"http://localhost:8000/api/v1/application/:id/applicants"
+"http://localhost:8000/api/v1/application/status/:id/update"
+
 
 
 //Port number testing
