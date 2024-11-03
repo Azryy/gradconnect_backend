@@ -12,7 +12,12 @@ export const register = async (req, res) => {
                 success: false
             })
         }
-        let user = await User.findOne({ email });
+        const file = req.file;
+        const fileUri = getDataUri(file);
+        const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+
+
+        const user = await User.findOne({ email });
         if (user) {
             return res.status(400).json({
                 message: "User already exist with this email",
@@ -27,6 +32,9 @@ export const register = async (req, res) => {
             phoneNumber,
             password: hashedPassword,
             role,
+            profile:{
+                profilePhoto: cloudResponse.secure_url,
+            }
 
         })
         return res.status(201).json({
@@ -85,7 +93,7 @@ export const login = async (req, res) => {
         }
 
         return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' }).json({
-            message: `Welcome back ${user.fullname}`,
+            message: `Welcome ${user.fullname}`,
             user,
             success: true
             
@@ -112,63 +120,67 @@ export const logout = async (req, res) => {
 export const updateProfile = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, bio, skills } = req.body;
-      
-        
         const file = req.file;
-        
-        const fileUri = getDataUri(file);
-        const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
 
-        
-        
-
-        let skillsArray;
-        if(skills){
-            skillsArray = skills.split(",");
-        }
-
-        
-        const userId = req.id; // middleware authentication
+        // Get the user's ID from authentication middleware
+        const userId = req.id; 
         let user = await User.findById(userId);
+
         if (!user) {
-            return res.status(400).json({
+            return res.status(404).json({
                 message: "User not found",
                 success: false
-            })
+            });
         }
-        //updating data
-        if(fullname)  user.fullname = fullname
-        if(email)  user.email = email
-        if(phoneNumber)  user.phoneNumber = phoneNumber
-        if(bio) user.profile.bio = bio
-        if(skills)  user.profile.skills = skillsArray
-       
 
-       
-        if(cloudResponse){
-            console.log("Cloudinary response:", cloudResponse);
+        // Conditional field updates
+        if (fullname) user.fullname = fullname;
+        if (email) user.email = email;
+        if (phoneNumber) user.phoneNumber = phoneNumber;
+        if (bio !== undefined) { // Check if bio is provided
+            user.profile.bio = bio || ""; // Set to empty string if bio is empty
+        } else {
+            user.profile.bio = ""; // Optionally ensure bio is set to empty string if not provided
+        }
+        user.profile.skills = skills ? skills.split(",") : [];
+
+        // Handle file upload if a new file is provided
+        if (file) {
+            const fileUri = getDataUri(file);
+            const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+            
             user.profile.resume = cloudResponse.secure_url;
             user.profile.resumeOriginalName = file.originalname;
         }
-            
+        else {
+            // Set resume fields to null if no new file is provided
+            user.profile.resume = null;
+            user.profile.resumeOriginalName = null;
+        }
 
-        //saving update
+        // Save the updated user information
         await user.save();
 
-        user = {
+        // Prepare response with updated user data
+        const updatedUser = {
             _id: user._id,
             fullname: user.fullname,
             email: user.email,
             phoneNumber: user.phoneNumber,
             role: user.role,
             profile: user.profile
-        }
+        };
+
         return res.status(200).json({
             message: "Profile updated successfully",
-            user,
+            user: updatedUser,
             success: true
-        })
+        });
     } catch (error) {
-        console.log(error);
+        console.error(error);
+        return res.status(500).json({
+            message: "An error occurred while updating the profile",
+            success: false
+        });
     }
-}
+};
