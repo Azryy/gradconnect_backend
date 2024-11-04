@@ -72,28 +72,38 @@ export const getCompanyById = async (req, res) => {
 
 export const updateCompany = async (req, res) => {
     try {
-        const {name,description,website,location} = req.body;
-        const file = req.file
+        const { id } = req.params;
+        if (!id) {
+            return res.status(400).json({
+                message: "Company ID is missing in request parameters.",
+                success: false
+            });
+        }
 
+        const { name, description, website, location } = req.body;
+        const file = req.file; // Handle file if needed in your logic
+        const updateData = { name, description, website, location };
 
-        const updateData = {name,description,website,location};
+        const company = await Company.findByIdAndUpdate(id, updateData, { new: true });
 
-        const company = await Company.findByIdAndUpdate(req.params.id, updateData, {new:true});
-
-        if(!company) {
+        if (!company) {
             return res.status(404).json({
                 message: "Company not found.",
                 success: false
-            })
+            });
         }
 
         return res.status(200).json({
             message: "Company information updated successfully.",
-            success: true
-        })
+            success: true,
+            company
+        });
 
     } catch (error) {
-        console.log(error);
-        
+        console.log("Error updating company:", error);
+        return res.status(500).json({
+            message: "Server error while updating company information.",
+            success: false
+        });
     }
-}
+};
