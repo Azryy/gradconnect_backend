@@ -97,20 +97,24 @@ export const getJobById = async (req, res) => {
 export const getAdminJobs = async (req, res) => {
     try {
         const adminId = req.id;
-        const jobs = await Job.find({created_by:adminId});
-        if(!jobs){
+        const jobs = await Job.find({ created_by: adminId })
+            .populate('company')
+            .sort({ createdAt: -1 }); // Sort by date in descending order
+        if (!jobs || jobs.length === 0) {
             return res.status(404).json({
                 message: "No jobs found",
-                success: false
-            })
+                success: false,
+            });
         }
         return res.status(200).json({
             jobs,
             success: true,
-            
-        })
+        });
     } catch (error) {
         console.log(error);
-        
+        return res.status(500).json({
+            message: "Server error",
+            success: false,
+        });
     }
-}
+};
