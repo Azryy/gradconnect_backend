@@ -134,3 +134,29 @@ export const updateStatus = async (req, res) => {
 
     }
 }
+
+export const cancelApplication = async (req, res) => {
+    try {
+        const { id } = req.params; // Job ID
+        const userId = req.user?._id; // Authenticated user ID from middleware
+
+        const job = await Job.findById(id);
+        if (!job) {
+            return res.status(404).json({ success: false, message: "Job not found" });
+        }
+
+        // Find the user's application and remove it
+        const applicationIndex = job.applications.findIndex(app => app.applicant === userId);
+        if (applicationIndex === -1) {
+            return res.status(400).json({ success: false, message: "You have not applied for this job" });
+        }
+
+        job.applications.splice(applicationIndex, 1);
+        await job.save();
+
+        res.status(200).json({ success: true, message: "Application canceled successfully" });
+    } catch (error) {
+        console.error("Cancel application error:", error);
+        res.status(500).json({ success: false, message: "Failed to cancel application" });
+    }
+};
