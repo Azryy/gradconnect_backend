@@ -1,0 +1,417 @@
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>38</1>
+        <2>219</2>
+        <3>184</3>
+        <4>212</4>
+        <5>221</5>
+        <6>17</6>
+        <7>88</7>
+        <8>164</8>
+        <9>94</9>
+        <10>80</10>
+        <11>62</11>
+      </buffer>
+    </id>
+    <fullname>Monkey D. Luffyyy</fullname>
+    <email>luffy@gmail.com</email>
+    <phoneNumber>123123123</phoneNumber>
+    <role>employee</role>
+    <profile>
+      <bio>Future King of Pirates, Captain of Straw Hat Pirates, My Favorite food is meat</bio>
+      <skills>
+        <skill>Advanced Haki</skill>
+        <skill>     Awakened Devil Fruit</skill>
+        <skill>    Currently  Yonko</skill>
+      </skills>
+      <resume>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730722206/ywsgadsfotkmiakakpw1.pdf</resume>
+      <resumeOriginalName>Resume.pdf</resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730599863/gx4krbuaoteynoo1gwgg.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>39</1>
+        <2>2</2>
+        <3>95</3>
+        <4>140</4>
+        <5>211</5>
+        <6>75</6>
+        <7>193</7>
+        <8>160</8>
+        <9>232</9>
+        <10>37</10>
+        <11>121</11>
+      </buffer>
+    </id>
+    <fullname>Naruto Uzumaki</fullname>
+    <email>naruto@gmail.com</email>
+    <phoneNumber>1234567890</phoneNumber>
+    <role>employee</role>
+    <profile>
+      <bio>Hinata&apos;s Husband, Boruto&apos;s Dad, 7th Hokage</bio>
+      <skills>
+        <skill>Kage Bunshin</skill>
+        <skill>      Rasengann</skill>
+        <skill>     9 Tails </skill>
+      </skills>
+      <resume>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1731628030/q462bvzibpjaocuekrty.pdf</resume>
+      <resumeOriginalName>Resume.pdf</resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730609759/nvsw6icy3h1dcxxqtstz.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>39</1>
+        <2>68</2>
+        <3>173</3>
+        <4>36</4>
+        <5>213</5>
+        <6>84</6>
+        <7>78</7>
+        <8>194</8>
+        <9>242</9>
+        <10>216</10>
+        <11>5</11>
+      </buffer>
+    </id>
+    <fullname>Diwata Pares</fullname>
+    <email>diwata@gmail.com</email>
+    <phoneNumber>987653127</phoneNumber>
+    <role>employer</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730626733/sbcihaksfvfovlobmfup.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>39</1>
+        <2>86</2>
+        <3>74</3>
+        <4>153</4>
+        <5>139</5>
+        <6>244</6>
+        <7>205</7>
+        <8>207</8>
+        <9>232</9>
+        <10>228</10>
+        <11>78</11>
+      </buffer>
+    </id>
+    <fullname>Light Yagami</fullname>
+    <email>light@gmail.com</email>
+    <phoneNumber>978713321</phoneNumber>
+    <role>employer</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730631241/pnpxkynvzkyjnhtlodna.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>39</1>
+        <2>90</2>
+        <3>145</3>
+        <4>2</4>
+        <5>202</5>
+        <6>171</6>
+        <7>34</7>
+        <8>251</8>
+        <9>28</9>
+        <10>164</10>
+        <11>80</11>
+      </buffer>
+    </id>
+    <fullname>Ichigo Kurosaki</fullname>
+    <email>ichigo@gmail.com</email>
+    <phoneNumber>9123131123</phoneNumber>
+    <role>employee</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730632336/vx9imwtvgbapmx36zroa.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>40</1>
+        <2>179</2>
+        <3>241</3>
+        <4>58</4>
+        <5>253</5>
+        <6>10</6>
+        <7>243</7>
+        <8>169</8>
+        <9>224</9>
+        <10>53</10>
+        <11>205</11>
+      </buffer>
+    </id>
+    <fullname>Kurt Dorado</fullname>
+    <email>kurt@gmail.com</email>
+    <phoneNumber>9667462937</phoneNumber>
+    <role>employer</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730720752/j7a1ftlw8fjtk7aywojb.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>42</1>
+        <2>189</2>
+        <3>245</3>
+        <4>132</4>
+        <5>155</5>
+        <6>122</6>
+        <7>54</7>
+        <8>141</8>
+        <9>149</9>
+        <10>98</10>
+        <11>103</11>
+      </buffer>
+    </id>
+    <fullname>Jaymuel Peñaredondo</fullname>
+    <email>jaymuelcutie@gmail.com</email>
+    <phoneNumber>9667462937</phoneNumber>
+    <role>employee</role>
+    <profile>
+      <bio>Mahal si Darlene</bio>
+      <skills>
+        <skill>Full Stack</skill>
+        <skill> Magluto</skill>
+      </skills>
+      <resume>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730854559/srwwrd1rr8odylplp42l.pdf</resume>
+      <resumeOriginalName>Resume.pdf</resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730854389/r5dq8msyv7pvqrlnnii2.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>42</1>
+        <2>204</2>
+        <3>24</3>
+        <4>218</4>
+        <5>32</5>
+        <6>156</6>
+        <7>44</7>
+        <8>138</8>
+        <9>132</9>
+        <10>112</10>
+        <11>6</11>
+      </buffer>
+    </id>
+    <fullname>Harvy Winceslao</fullname>
+    <email>harvy10@gmail.com</email>
+    <phoneNumber>9667462937</phoneNumber>
+    <role>employer</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1730858008/ycixk9hav0fobav4blgj.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>48</1>
+        <2>130</2>
+        <3>49</3>
+        <4>171</4>
+        <5>128</5>
+        <6>93</6>
+        <7>120</7>
+        <8>183</8>
+        <9>202</9>
+        <10>63</10>
+        <11>82</11>
+      </buffer>
+    </id>
+    <fullname>Elon Musk</fullname>
+    <email>elon@gmail.com</email>
+    <phoneNumber>9123123123</phoneNumber>
+    <role>employer</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1731232304/qfmpgaphtzlwobyyblxt.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>54</1>
+        <2>140</2>
+        <3>155</3>
+        <4>182</4>
+        <5>79</5>
+        <6>173</6>
+        <7>28</7>
+        <8>160</8>
+        <9>44</9>
+        <10>190</10>
+        <11>254</11>
+      </buffer>
+    </id>
+    <fullname>Francis Anciado</fullname>
+    <email>francis@gmail.com</email>
+    <phoneNumber>9876123123</phoneNumber>
+    <role>employee</role>
+    <profile>
+      <bio>IT Student specialized in Service Management</bio>
+      <skills>
+        <skill>Communication Skills</skill>
+        <skill> Leadership</skill>
+      </skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1731628187/nxyu9m4txmbxzz0suvm9.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>66</1>
+        <2>194</2>
+        <3>87</3>
+        <4>98</4>
+        <5>192</5>
+        <6>175</6>
+        <7>116</7>
+        <8>170</8>
+        <9>94</9>
+        <10>100</10>
+        <11>241</11>
+      </buffer>
+    </id>
+    <fullname>Kurt Dorado</fullname>
+    <email>doradokurt02@gmail.com</email>
+    <phoneNumber>9667462937</phoneNumber>
+    <role>employee</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1732428375/eumrp16yxnt7nsr9wr4e.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>66</1>
+        <2>194</2>
+        <3>145</3>
+        <4>98</4>
+        <5>192</5>
+        <6>175</6>
+        <7>116</7>
+        <8>170</8>
+        <9>94</9>
+        <10>100</10>
+        <11>255</11>
+      </buffer>
+    </id>
+    <fullname>Keii</fullname>
+    <email>keiidee0202@gmail.com</email>
+    <phoneNumber>9667462937</phoneNumber>
+    <role>employer</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1732428433/uko2dfkbcjf6eqrxforg.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
+<users>
+  <user>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>73</1>
+        <2>142</2>
+        <3>201</3>
+        <4>88</4>
+        <5>121</5>
+        <6>86</6>
+        <7>161</7>
+        <8>1</8>
+        <9>63</9>
+        <10>37</10>
+        <11>45</11>
+      </buffer>
+    </id>
+    <fullname>Bill Gates</fullname>
+    <email>billgates@gmail.com</email>
+    <phoneNumber>9123123123</phoneNumber>
+    <role>employer</role>
+    <profile>
+      <bio></bio>
+      <skills></skills>
+      <resume></resume>
+      <resumeOriginalName></resumeOriginalName>
+      <profilePhoto>https://res.cloudinary.com/dp3pnrg7y/image/upload/v1732873928/kp94qjq0uwonqwftzuzi.jpg</profilePhoto>
+    </profile>
+  </user>
+</users>
