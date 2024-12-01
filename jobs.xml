@@ -1,0 +1,208 @@
+<jobs>
+  <job>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>66</1>
+        <2>148</2>
+        <3>117</3>
+        <4>214</4>
+        <5>180</5>
+        <6>112</6>
+        <7>6</7>
+        <8>19</8>
+        <9>10</9>
+        <10>79</10>
+        <11>57</11>
+      </buffer>
+    </id>
+    <title>Production Manager</title>
+    <description>We need a skilled production manager to operate the manufacturing industry</description>
+    <requirements>
+      <requirement>Good communication skills and leadership</requirement>
+    </requirements>
+    <salary>23000</salary>
+    <experienceLevel>atleast 2 yrs</experienceLevel>
+    <location>Metro Manila</location>
+    <jobType>Full Time</jobType>
+    <position>ALL</position>
+    <company>Hanabishi</company>
+    <created_by>Light Yagami</created_by>
+    <applications>
+      <application>
+        <buffer>
+          <0>103</0>
+          <1>68</1>
+          <2>23</2>
+          <3>41</3>
+          <4>210</4>
+          <5>109</5>
+          <6>253</6>
+          <7>160</7>
+          <8>74</8>
+          <9>94</9>
+          <10>164</10>
+          <11>194</11>
+        </buffer>
+      </application>
+    </applications>
+    <createdAt>Sun Nov 24 2024 10:50:29 GMT+0800 (China Standard Time)</createdAt>
+    <updatedAt>Mon Nov 25 2024 14:20:25 GMT+0800 (China Standard Time)</updatedAt>
+  </job>
+</jobs>
+<jobs>
+  <job>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>66</1>
+        <2>195</2>
+        <3>7</3>
+        <4>98</4>
+        <5>192</5>
+        <6>175</6>
+        <7>116</7>
+        <8>170</8>
+        <9>94</9>
+        <10>101</10>
+        <11>20</11>
+      </buffer>
+    </id>
+    <title>Manager</title>
+    <description>We need a manager</description>
+    <requirements>
+      <requirement>Good person and willing to learn</requirement>
+    </requirements>
+    <salary>120000</salary>
+    <experienceLevel>At least 1 yr</experienceLevel>
+    <location>USA</location>
+    <jobType>Full Time</jobType>
+    <position>ALL</position>
+    <company>HP</company>
+    <created_by>Keii</created_by>
+    <applications>
+      <application>
+        <buffer>
+          <0>103</0>
+          <1>66</1>
+          <2>195</2>
+          <3>239</3>
+          <4>98</4>
+          <5>192</5>
+          <6>175</6>
+          <7>116</7>
+          <8>170</8>
+          <9>94</9>
+          <10>101</10>
+          <11>37</11>
+        </buffer>
+      </application>
+    </applications>
+    <createdAt>Sun Nov 24 2024 14:09:11 GMT+0800 (China Standard Time)</createdAt>
+    <updatedAt>Sun Nov 24 2024 14:13:03 GMT+0800 (China Standard Time)</updatedAt>
+  </job>
+</jobs>
+<jobs>
+  <job>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>73</1>
+        <2>147</2>
+        <3>182</3>
+        <4>125</4>
+        <5>127</5>
+        <6>86</6>
+        <7>133</7>
+        <8>60</8>
+        <9>20</9>
+        <10>119</10>
+        <11>183</11>
+      </buffer>
+    </id>
+    <title>Software Developer</title>
+    <description>We need a software developer in Microsoft. We also accept internship. Feel free to apply</description>
+    <requirements>
+      <requirement>Good at frontend and backend</requirement>
+    </requirements>
+    <salary>450000</salary>
+    <experienceLevel>No Experience is Accepted</experienceLevel>
+    <location>New York</location>
+    <jobType>Full Time</jobType>
+    <position>ALL</position>
+    <company>Microsoft</company>
+    <created_by>Bill Gates</created_by>
+    <applications>
+      <application>
+        <buffer>
+          <0>103</0>
+          <1>73</1>
+          <2>148</2>
+          <3>192</3>
+          <4>125</4>
+          <5>127</5>
+          <6>86</6>
+          <7>133</7>
+          <8>60</8>
+          <9>20</9>
+          <10>120</10>
+          <11>51</11>
+        </buffer>
+      </application>
+    </applications>
+    <createdAt>Fri Nov 29 2024 18:13:10 GMT+0800 (China Standard Time)</createdAt>
+    <updatedAt>Fri Nov 29 2024 18:17:36 GMT+0800 (China Standard Time)</updatedAt>
+  </job>
+</jobs>
+<jobs>
+  <job>
+    <id>
+      <buffer>
+        <0>103</0>
+        <1>73</1>
+        <2>147</2>
+        <3>249</3>
+        <4>125</4>
+        <5>127</5>
+        <6>86</6>
+        <7>133</7>
+        <8>60</8>
+        <9>20</9>
+        <10>119</10>
+        <11>189</11>
+      </buffer>
+    </id>
+    <title>Data Analyst</title>
+    <description>we need a data analyst to provide insights for trends</description>
+    <requirements>
+      <requirement>Good at generating reports</requirement>
+    </requirements>
+    <salary>340000</salary>
+    <experienceLevel>atleast 2 yrs</experienceLevel>
+    <location>New York</location>
+    <jobType>Full Time</jobType>
+    <position>CICS</position>
+    <company>Microsoft</company>
+    <created_by>Bill Gates</created_by>
+    <applications>
+      <application>
+        <buffer>
+          <0>103</0>
+          <1>74</1>
+          <2>99</2>
+          <3>192</3>
+          <4>3</4>
+          <5>100</5>
+          <6>19</6>
+          <7>8</7>
+          <8>104</8>
+          <9>39</9>
+          <10>114</10>
+          <11>214</11>
+        </buffer>
+      </application>
+    </applications>
+    <createdAt>Fri Nov 29 2024 18:14:17 GMT+0800 (China Standard Time)</createdAt>
+    <updatedAt>Sat Nov 30 2024 09:00:48 GMT+0800 (China Standard Time)</updatedAt>
+  </job>
+</jobs>

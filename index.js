@@ -11,6 +11,7 @@ import companyRoute from "./routes/company.route.js";
 import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
 import { User } from "./models/user.model.js";
+import { Job } from "./models/job.model.js";
 
 
 dotenv.config({});
@@ -21,7 +22,7 @@ const app = express();
 
 
 
-//xml integration
+//xml integration in users
 app.get("/api/users/xml", async (req, res) => {
   try {
     // Fetch all user records
@@ -90,6 +91,96 @@ app.post("/api/users/xml", express.text({ type: "application/xml" }), async (req
   }
 });
 
+//xml integration in jobs
+app.get("/api/jobs/xml", async (req, res) => {
+  try {
+    // Fetch all job records
+    const jobs = await Job.find()
+      .populate("company", "name") // Assuming company has a "name" field
+      .populate("created_by", "fullname") // Assuming user has a "fullname" field
+      .lean();
+
+    // Convert data to XML
+    const builder = new XMLBuilder({ ignoreAttributes: false, format: true, indentBy: "  " });
+    const xmlData = builder.build({
+      jobs: jobs.map((job) => ({
+        job: {
+          id: job._id,
+          title: job.title,
+          description: job.description,
+          requirements: { requirement: job.requirements || [] },
+          salary: job.salary,
+          experienceLevel: job.experienceLevel,
+          location: job.location,
+          jobType: job.jobType,
+          position: job.position,
+          company: job.company?.name || "",
+          created_by: job.created_by?.fullname || "",
+          applications: {
+            application: job.applications || [],
+          },
+          createdAt: job.createdAt,
+          updatedAt: job.updatedAt,
+        },
+      })),
+    });
+
+    // Save XML to a file
+    const filePath = path.resolve("./jobs.xml");
+    fs.writeFileSync(filePath, xmlData, "utf-8");
+
+    // Set headers for download
+    res.setHeader("Content-Disposition", "attachment; filename=jobs.xml");
+    res.setHeader("Content-Type", "application/xml");
+
+    // Send the file
+    res.sendFile(filePath, (err) => {
+      if (err) {
+        console.error("Error sending file:", err);
+        res.status(500).send("Failed to download XML file");
+      } else {
+        console.log("File sent successfully");
+      }
+    });
+  } catch (error) {
+    console.error("Error generating XML:", error);
+    res.status(500).json({ error: "Failed to generate XML file" });
+  }
+});
+
+// Endpoint to import jobs from XML
+app.post("/api/jobs/xml", express.text({ type: "application/xml" }), async (req, res) => {
+  try {
+    const parser = new XMLParser();
+    const jsonData = parser.parse(req.body); // Parse XML to JSON
+
+    // Extract job data
+    const jobs = jsonData.jobs.job; // Assuming a structure like <jobs><job>...</job></jobs>
+    const formattedJobs = Array.isArray(jobs) ? jobs : [jobs]; // Ensure it's an array
+
+    // Map job data to match the schema
+    const jobsToSave = formattedJobs.map((job) => ({
+      title: job.title,
+      description: job.description,
+      requirements: job.requirements?.requirement || [],
+      salary: job.salary,
+      experienceLevel: job.experienceLevel,
+      location: job.location,
+      jobType: job.jobType,
+      position: job.position,
+      company: job.company, // Ensure this is the ObjectId for the company
+      created_by: job.created_by, // Ensure this is the ObjectId for the user
+      applications: job.applications?.application || [],
+    }));
+
+    // Save jobs to the database
+    const savedJobs = await Job.insertMany(jobsToSave);
+    res.status(201).json({ message: "Jobs imported successfully", savedJobs });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to import jobs from XML" });
+  }
+});
  
 
 //middleware
@@ -140,6 +231,7 @@ app.use("/api/v1/application", applicationRoute);
 
 //xml api
 "http://localhost:8000/api/users/xml"
+"http://localhost:8000/api/jobs/xml"
 
 
 
