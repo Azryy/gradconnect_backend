@@ -79,8 +79,8 @@ app.post("/api/users/xml", express.text({ type: "application/xml" }), async (req
     const jsonData = parser.parse(req.body); // Parse XML to JSON
 
     // Extract user data
-    const users = jsonData.users.user; // Assuming a structure like <users><user>...</user></users>
-    const formattedUsers = Array.isArray(users) ? users : [users]; // Ensure it's an array
+    const users = jsonData.users.user;
+    const formattedUsers = Array.isArray(users) ? users : [users];
 
     // Save users to the database
     const savedUsers = await User.insertMany(formattedUsers);
@@ -96,8 +96,8 @@ app.get("/api/jobs/xml", async (req, res) => {
   try {
     // Fetch all job records
     const jobs = await Job.find()
-      .populate("company", "name") // Assuming company has a "name" field
-      .populate("created_by", "fullname") // Assuming user has a "fullname" field
+      .populate("company", "name") 
+      .populate("created_by", "fullname") 
       .lean();
 
     // Convert data to XML
@@ -155,8 +155,8 @@ app.post("/api/jobs/xml", express.text({ type: "application/xml" }), async (req,
     const jsonData = parser.parse(req.body); // Parse XML to JSON
 
     // Extract job data
-    const jobs = jsonData.jobs.job; // Assuming a structure like <jobs><job>...</job></jobs>
-    const formattedJobs = Array.isArray(jobs) ? jobs : [jobs]; // Ensure it's an array
+    const jobs = jsonData.jobs.job; 
+    const formattedJobs = Array.isArray(jobs) ? jobs : [jobs]; 
 
     // Map job data to match the schema
     const jobsToSave = formattedJobs.map((job) => ({
@@ -168,8 +168,8 @@ app.post("/api/jobs/xml", express.text({ type: "application/xml" }), async (req,
       location: job.location,
       jobType: job.jobType,
       position: job.position,
-      company: job.company, // Ensure this is the ObjectId for the company
-      created_by: job.created_by, // Ensure this is the ObjectId for the user
+      company: job.company,
+      created_by: job.created_by,
       applications: job.applications?.application || [],
     }));
 

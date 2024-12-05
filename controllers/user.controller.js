@@ -141,10 +141,10 @@ export const updateProfile = async (req, res) => {
         if (fullname) user.fullname = fullname;
         if (email) user.email = email;
         if (phoneNumber) user.phoneNumber = phoneNumber;
-        if (bio !== undefined) { // Check if bio is provided
-            user.profile.bio = bio || ""; // Set to empty string if bio is empty
+        if (bio !== undefined) {
+            user.profile.bio = bio || ""; 
         } else {
-            user.profile.bio = ""; // Optionally ensure bio is set to empty string if not provided
+            user.profile.bio = ""; 
         }
         user.profile.skills = skills ? skills.split(",") : [];
 
