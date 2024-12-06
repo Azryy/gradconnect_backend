@@ -1,3 +1,4 @@
+import { Application } from "../models/application.model.js";
 import { Job } from "../models/job.model.js";
 //admin post job
 export const postJob = async (req, res) => {
@@ -94,7 +95,7 @@ export const getJobById = async (req, res) => {
     }
 }
 
-export const getAdminJobs = async (req, res) => {
+export const getAllAdminJobs = async (req, res) => {
     try {
         const adminId = req.id;
         const jobs = await Job.find({ created_by: adminId })
@@ -119,3 +120,39 @@ export const getAdminJobs = async (req, res) => {
     }
 };
 
+export const deleteJob = async (req, res) => {
+    try {
+        const { id } = req.params;
+        
+        if (!id) {
+            return res.status(400).json({
+                message: "Job ID is required.",
+                success: false
+            });
+        }
+
+
+        const company = await Job.findByIdAndDelete(id);
+
+        if (!company) {
+            return res.status(404).json({
+                message: "Job not found.",
+                success: false
+            });
+        }
+
+            await Application.deleteMany({ job: id });
+
+        return res.status(200).json({
+            message: "Job deleted successfully.",
+            success: true
+        });
+
+    } catch (error) {
+        console.log("Error deleting Job:", error);
+        return res.status(500).json({
+            message: "Server error while deleting Job.",
+            success: false
+        });
+    }
+};         

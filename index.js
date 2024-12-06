@@ -55,6 +55,7 @@ app.use("/api/v1/application", applicationRoute);
 "http://localhost:8000/api/v1/job/get"
 "http://localhost:8000/api/v1/job/getadminjobs"
 "http://localhost:8000/api/v1/job/get/:id"
+"http://localhost:8000/api/v1/job/delete/:id"
 
 //for applications
 "http://localhost:8000/api/v1/application/apply/:id"
